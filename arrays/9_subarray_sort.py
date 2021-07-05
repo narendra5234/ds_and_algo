@@ -3,7 +3,7 @@ def sub_array_sort(arr):
     for i in range(len(arr)):
         if is_out_of_order(i, arr[i], arr):
             min_out_of_order = min(min_out_of_order, arr[i])
-            max_out_of_order = min(min_out_of_order, arr[i])
+            max_out_of_order = max(max_out_of_order, arr[i])
     if min_out_of_order == float("inf"):
         return [-1, -1]
     l, r = 0, len(arr) - 1
